@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Display Current Day and Time -</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+
+var date = new Date();
+var day_name = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var curr_day  = date.getDay();
+
+var AmPm = (date.getHours() < 12) ? "AM" : "PM";
+var hour = (date.getHours() < 12) ? date.getHours() : date.getHours() - 12;
+
+
+document.getElementById("demo1").innerHTML = "Today is :" + "&nbsp;" + day_name[curr_day] + "."
+
+document.getElementById("demo2").innerHTML = "Current time is :" + "&nbsp;" + hour + AmPm + "&nbsp;" + ":" + "&nbsp;" + date.getMinutes() + "&nbsp;" + ":" + "&nbsp;" + date.getSeconds();
+
+</script>
+
+</body>
+</html>
+
+
